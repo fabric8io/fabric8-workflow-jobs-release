@@ -36,7 +36,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>maven/Fabric8DocsUpdate.groovy</scriptPath>
+    <scriptPath>maven/Fabric8PipelineRelease-from-appsAndQuickstarts.groovy</scriptPath>
   </definition>
   <triggers/>
 </flow-definition>
