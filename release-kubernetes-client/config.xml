@@ -36,7 +36,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>maven/KubernetesClientRelease.groovy</scriptPath>
+    <scriptPath>maven/ReleaseFabric8-kubernetesClient.groovy</scriptPath>
   </definition>
   <triggers/>
 </flow-definition>

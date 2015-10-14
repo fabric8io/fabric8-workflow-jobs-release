@@ -36,7 +36,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>maven/Fabric8iPaaSRelease.groovy</scriptPath>
+    <scriptPath>maven/ReleaseFabric8-fabric8-ipaas.groovy</scriptPath>
   </definition>
   <triggers/>
 </flow-definition>
