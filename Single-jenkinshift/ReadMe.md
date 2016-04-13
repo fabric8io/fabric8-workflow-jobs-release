@@ -1,6 +1,6 @@
-# Single release of spring-cloud-kubernetes
+# Single release of jenkinshift
 
-Triggers a single release of [spring-cloud-kubernetes](https://github.com/fabric8io/spring-cloud-kubernetes)
+Triggers a single release of [jenkinshift](https://github.com/fabric8io/jenkinshift)
 
 The workflow will first check to see if there's a newer version of any fabric8 dependencies from a previous stage available, if there are then the workflow will update the dependency and submit a pull request so that the CI tests run.  Upon success of the CI job the dependency update pull request will be merged.
 
