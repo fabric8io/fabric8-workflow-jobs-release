@@ -26,6 +26,16 @@
           <description></description>
           <defaultValue>default</defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>OPENSHIFT_STAGING_DOCKER_REGISTRY_URL</name>
+          <description></description>
+          <defaultValue>registry.cd.beast.fabric8.io</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>KUBERNETES_STAGING_DOCKER_REGISTRY_URL</name>
+          <description></description>
+          <defaultValue>10.233.12.84:80</defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
