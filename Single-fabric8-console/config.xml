@@ -9,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>OPENSHIFT_URL</name>
           <description></description>
-          <defaultValue>https://ux.fabric8.io:8443</defaultValue>
+          <defaultValue>ux.fabric8.io</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>KUBERNETES_URL</name>
