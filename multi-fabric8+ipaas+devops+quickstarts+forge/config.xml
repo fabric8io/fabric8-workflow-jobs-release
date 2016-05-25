@@ -49,14 +49,14 @@
       </userRemoteConfigs>
       <branches>
         <hudson.plugins.git.BranchSpec>
-          <name>*/multi-fabric8+ipaas+devops+quickstarts+forge</name>
+          <name>*/master</name>
         </hudson.plugins.git.BranchSpec>
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>Jenkinsfile</scriptPath>
+    <scriptPath>multi-fabric8+ipaas+devops+quickstarts+forge/Jenkinsfile</scriptPath>
   </definition>
   <triggers/>
 </flow-definition>
