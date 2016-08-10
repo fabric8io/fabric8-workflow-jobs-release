@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1.15">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.5-SNAPSHOT">
+    <script>node {
+   stage &apos;Checkout&apos;
+
+   git url: &apos;https://github.com/fabric8io/ipaas-quickstarts.git&apos;
+
+   def mvnHome = tool &apos;maven-3.3.9&apos;
+
+   // Mark the code build &apos;stage&apos;....
+   stage &apos;Generate Archetypes&apos;
+
+   sh &quot;${mvnHome}/bin/mvn clean install -pl .,archetype-builder,archetypes-catalog -Dmaven.home=${mvnHome}&quot;
+
+   stage &apos;Run System Tests&apos;
+
+   archive &apos;archetype-itests/target/createdProject/**.*&apos;
+
+   sh &quot;${mvnHome}/bin/mvn clean install -U -Dtest.arq=true -Dmaven.home=${mvnHome}&quot;
+   
+   stage &apos;Archiving&apos;
+   
+   archive &apos;archetype-itests/target/createdProject/**.*&apos;
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>@daily</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+</flow-definition>
