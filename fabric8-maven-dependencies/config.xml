@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<flow-definition plugin="workflow-job@1.10">
+<flow-definition plugin="workflow-job@1.15">
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@1.10">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.5-SNAPSHOT">
     <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.0">
       <configVersion>2</configVersion>
       <userRemoteConfigs>
@@ -23,5 +23,12 @@
     </scm>
     <scriptPath>Jenkinsfile</scriptPath>
   </definition>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>@daily</spec>
+    </hudson.triggers.TimerTrigger>
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.14.0">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+  </triggers>
 </flow-definition>
